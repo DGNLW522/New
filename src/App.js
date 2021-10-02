@@ -47,9 +47,13 @@ import viewcalCost from "./components/pages/viewcalCost";
 //Naveen
 import ManagePharmacy from './components/PharmacyServices/managePharmacy';
 import AddMadicine from "./components/pages/create";
-import MadicineList from "./components/pages/medicineList";
+import ViewMadicines from "./components/pages/medicineList";
 import EditMadicine from "./components/pages/editpatientPharm";
 import AddPatientPharmacy from "./components/pages/create-patient";
+import SearchMadicine from './components/pages/searchMadicine';
+import SearchPharmacyCustomer from './components/pages/searchPharmacyCustomer';
+import ViewExercises from "./components/pages/CusList";
+import PharmacyReport from './components/pages/PharmacyReport';
 
 //Venura
 import RegisterVaccine from "./components/pages/registerVaccine";
@@ -126,9 +130,13 @@ function App() {
 
               <Route path='/managePharmacy' component={ManagePharmacy} />
               <Route path="/create" component={AddMadicine} />
-              <Route path="/medicineList" component={MadicineList} />
+              <Route path="/medicineList" component={ViewMadicines} />
+              <Route path="/CusList" component={ViewExercises} />
               <Route path="/editpatientPharm/:id" component={EditMadicine} />
               <Route path="/create-patient" component={AddPatientPharmacy} />
+              <Route path='/searchMadicine' component={SearchMadicine} />
+              <Route path='/searchPharmacyCustomer' component={SearchPharmacyCustomer} />
+              <Route path='/PharmacyReport' component={PharmacyReport } />
 
               <Route path="/registerVaccine" component={RegisterVaccine} />
               <Route path="/tfee" component={Tfee} />

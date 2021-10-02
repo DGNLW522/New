@@ -85,7 +85,7 @@ export default class AddMadicine extends Component {
     axios.post('http://localhost:5000/madicines/add', exercise)
       .then(res => console.log(res.data));
 
-
+      alert("Madicine Added!");
     window.location = '/medicineList';
   }
 
@@ -106,7 +106,7 @@ export default class AddMadicine extends Component {
                 value={this.state.mid}
                 onChange={this.onChangeMid}
               />
-
+<br/>
             </div>
 
             <div className="form-group">
@@ -118,7 +118,7 @@ export default class AddMadicine extends Component {
                 onChange={this.onChangeMname}
               />
 
-
+<br/>
 
             </div>
             <div className="form-group">
@@ -129,6 +129,7 @@ export default class AddMadicine extends Component {
                 value={this.state.mtype}
                 onChange={this.onChangeMtype}
               />
+              <br/>
             </div>
             <div className="form-group">
               <label>Buying Price : </label>
@@ -139,6 +140,7 @@ export default class AddMadicine extends Component {
                 value={this.state.bprice}
                 onChange={this.onChangeBprice}
               />
+              <br/>
             </div>
             <div className="form-group">
               <label>Expiry Date: </label>
@@ -147,6 +149,7 @@ export default class AddMadicine extends Component {
                   selected={this.state.edate}
                   onChange={this.onChangeEdate}
                 />
+                <br/><br/>
               </div>
             </div>
             <div className="form-group">
@@ -156,6 +159,7 @@ export default class AddMadicine extends Component {
                   selected={this.state.bdate}
                   onChange={this.onChangeBdate}
                 />
+                <br/><br/>
               </div>
             </div>
             <div className="form-group">
@@ -166,12 +170,14 @@ export default class AddMadicine extends Component {
                 value={this.state.dosage}
                 onChange={this.onChangeDosage}
               />
+              
             </div>
 
             <br></br>
             <div className="form-group">
               <input type="Submit" value="Add Madicine" className="btn btn-primary" />
             </div>
+            <br/>
           </form>
         </div>
       </div>

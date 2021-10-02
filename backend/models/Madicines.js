@@ -9,7 +9,7 @@ const madicineSchema = new Schema({
         unique: true,
         trim: true,
 
-    },
+    }, 
     mname: {
         type: String,
         required: true,
@@ -25,7 +25,6 @@ const madicineSchema = new Schema({
     bprice: {
         type: Number,
         required: true,
-
         trim: true,
     },
     edate: {

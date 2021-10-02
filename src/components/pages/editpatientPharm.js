@@ -21,7 +21,7 @@ export default class EditPatient extends Component {
     this.state = {
       mid: '',
       mname: '',
-      mtype: '',
+      mtype: '', 
       bprice: 0,
       edate: new Date(),
       bdate: new Date(),
@@ -106,6 +106,7 @@ export default class EditPatient extends Component {
     axios.post('http://localhost:5000/madicines/edit/' + this.props.match.params.id, exercise)
       .then(res => console.log(res.data));
 
+      alert("Madicine Details Updated!");
     window.location = '/medicineList';
   }
 
@@ -115,7 +116,7 @@ export default class EditPatient extends Component {
         <br />
         <div className='container' id="editMedicineForm">
           <h3 className="addStaffTitle">EDIT MEDICINE DETAILS</h3>
-          <br />
+          <br/>
           <form onSubmit={this.onSubmit}>
             <div className="form-group">
               <label>Madicine Name : </label>
@@ -126,7 +127,7 @@ export default class EditPatient extends Component {
                 onChange={this.onChangeMname}
               />
 
-
+<br/>
 
             </div>
             <div className="form-group">
@@ -137,7 +138,7 @@ export default class EditPatient extends Component {
                 value={this.state.mid}
                 onChange={this.onChangeMid}
               />
-
+<br/>
             </div>
 
 
@@ -149,6 +150,7 @@ export default class EditPatient extends Component {
                 value={this.state.mtype}
                 onChange={this.onChangeMtype}
               />
+              <br/>
             </div>
             <div className="form-group">
               <label>Buying Price : </label>
@@ -159,6 +161,7 @@ export default class EditPatient extends Component {
                 value={this.state.bprice}
                 onChange={this.onChangeBprice}
               />
+              <br/>
             </div>
             <div className="form-group">
               <label>Expiry Date: </label>
@@ -167,8 +170,10 @@ export default class EditPatient extends Component {
                   selected={this.state.edate}
                   onChange={this.onChangeEdate}
                 />
+                <br/><br/>
               </div>
             </div>
+            
             <div className="form-group">
               <label>Manufacture Date: </label>
               <div>
@@ -176,6 +181,7 @@ export default class EditPatient extends Component {
                   selected={this.state.bdate}
                   onChange={this.onChangeBdate}
                 />
+                <br/><br/>
               </div>
             </div>
             <div className="form-group">
@@ -186,12 +192,13 @@ export default class EditPatient extends Component {
                 value={this.state.dosage}
                 onChange={this.onChangeDosage}
               />
+              <br/>
             </div>
 
 
-            <br /><br />
+            <br />
             <div className="form-group">
-              <input type="Submit" value="Edit Medicine Details" className="btn btn-primary" />
+            <input id="editMadiBtn" type="submit" value="Edit Madicine Details" className="btn btn-primary" />
             </div>
           </form>
         </div>

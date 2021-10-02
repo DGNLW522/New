@@ -61,6 +61,7 @@ export default class ViewMadicines extends Component {
             <div className='viewMedicinePage'>
                 <br />
                 <div className='container' id="viewMedicineForm">
+                <button className="searchMadicineBtn"><Link className="toAddPage" to="/searchMadicine" >Search Customer</Link></button>  
                     <h3 className="viewMedicineTitle">MEDICINES LIST</h3>
                     <br />
                     <table className="table">
@@ -80,6 +81,8 @@ export default class ViewMadicines extends Component {
                             {this.madicinesList()}
                         </tbody>
                     </table>
+             
+                    
                 </div>
             </div>
         )
